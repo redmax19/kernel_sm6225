@@ -41,6 +41,7 @@ jobs:
         make O=out vendor/bengal-perf_defconfig
         make O=out vendor/ext_config/moto-bengal.config
         make 0=out vendor/ext_config/guamp-default.config
+        make mrproper
         make O=out --jobs=$(nproc)
 
     - name: Build AnyKernel package
