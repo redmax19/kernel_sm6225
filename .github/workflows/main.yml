@@ -1,4 +1,4 @@
-name: Build
+name: Build kernel guamp
 
 on:
   workflow_dispatch:
@@ -35,6 +35,9 @@ jobs:
 
     - name: AnyKernel3
       run: git clone https://github.com/osm0sis/AnyKernel3
+
+    - name: ksu
+      run: curl -LSs "https://raw.githubusercontent.com/doubledashdot/sKernelSU/master/kernel/setup.sh" | bash -s master
 
     - name: Build
       run: |
